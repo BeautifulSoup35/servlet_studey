@@ -1,6 +1,7 @@
 package com.korit.servletstudy;
 
 import java.io.*;
+import java.rmi.ServerException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 

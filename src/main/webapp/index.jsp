@@ -2,11 +2,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+    <title>JSP - Hello World</title>
+    <style>
+        table {
+            border: 1px solid #dbdbdb;
+            border-collapse: collapse;
+        }
+        th, td {
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            padding: 5px 10px;
+        }
+    </style>
 </head>
 <body>
-<h1><%= "Hello World!" %></h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+    <h1>계좌 생성</h1>
+    <button type="button" class="create-button">생성하기</button>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>AccountNo</th>
+            <th>Owner</th>
+            <th>Balance</th>
+        </tr>
+
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+    <script>
+        main();
+        function main() {
+            const createBuuton = document.querySelector(".create-button");
+            createBuuton.onclick = () => {
+                const inputs = document.querySelectorAll("input");
+                const acccountObj = {
+                    id : inputs[0].value,//객체
+                    accountNo : inputs[1].value,
+                    owner : inputs[2].value,
+                    balance : inputs[3].value,
+                };
+
+                fetch("http://localhost:8080/servlet_study_war_exploded//api/accounts",{
+                    method: "post",//servlet의 doPost요청
+                    body: JSON.stringify(acccountObj),
+                    headers: {
+                        "Content-Type": "apllication/json",
+                    }
+                });
+            }
+        }
+    </script>
 </body>
 </html>
