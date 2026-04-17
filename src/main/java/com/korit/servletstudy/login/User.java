@@ -1,4 +1,4 @@
-package com.korit.servletstudy.longin;
+package com.korit.servletstudy.login;
 
 import lombok.Builder;
 import lombok.Data;
@@ -9,5 +9,6 @@ public class User {
     private int id;
     private String userName;
     private String password;
-    private String name;
+    private String email;
+    private String role;//권한
 }

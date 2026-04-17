@@ -1,15 +1,13 @@
-package com.korit.servletstudy.longin;
+package com.korit.servletstudy.login;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter("/*")//한글인코딩이니 무조건
-public class EncodingFilter implements Filter {
+public class EncodingFilter implements Filter {//url로 들어오면 무조건 tofilter가 실행된다
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         chain.doFilter(request, response);
-    }
+    }//이름을가지고 필터를 정리한다
 }

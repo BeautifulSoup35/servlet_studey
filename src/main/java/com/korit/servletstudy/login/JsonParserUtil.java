@@ -1,4 +1,4 @@
-package com.korit.servletstudy.longin;
+package com.korit.servletstudy.login;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Map;
 
-public class JsonParserUtil {
+public class JsonParserUtil {//json으로 변환해주는것을 모아놓은 util
 
     public static String getJson(HttpServletRequest request) throws IOException {
         BufferedReader bufferedReader = request.getReader();
@@ -22,7 +22,7 @@ public class JsonParserUtil {
 
     public static Map<String, Object> parse(String json) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.readValue(json, Map.class);
+        return objectMapper.readValue(json, Map.class);//json을 map자료형으로 읽어라 즉 map으로 바뀐다
     }
 
     public static String stringify(Object obj) throws JsonProcessingException {
