@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box {
+                margin: 20px;
+                box-sizing: border-box;
+                border: 10px solid #222;
+                /* 원래 여백이 없었는데 만듦 */
+                padding: 50px;
+                width: 200px;
+                height: 200px;
+                background-color: #dbdbdb;
+            }
+            .box2 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+            }
+            .ibox {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                padding: 20px;
+                border: 10px solid #222;
+                /* margin은 양옆만 준다 */
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="box2"></div>
+        </div>
+        <div class="box">
+            <div class="box2"></div>
+        </div>
+        <div>
+            <span class="ibox">가나다라</span><span class="ibox">마바사</span>
+        </div>
+    </body>
+</html>

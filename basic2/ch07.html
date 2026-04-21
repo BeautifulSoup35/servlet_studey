@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            
+            .p-box2 {
+                position: static;
+                width: 500px;
+                height: 500px;
+                background-color: green;
+            }.p-box {
+                position: relative;
+                /* z-index: -1; */
+                top: 100px;
+                width: 500px;
+                height: 500px;
+                background-color: yellow;
+            }
+            .c-box1 {
+                width: 200px;
+                height: 100px;
+                background-color: brown;
+                
+            }
+            .c-box2 {
+                position: absolute;
+                top: 100px;
+                right: 100px;
+                width: 200px;
+                height: 100px;
+                background-color: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="p-box">
+            <div class="c-box1"></div>
+            <div class="c-box2"></div>
+        </div>
+
+        <div class="p-box2">
+            <div class="c-box1"></div>
+            <div class="c-box2"></div>
+        </div>
+    </body>
+</html>

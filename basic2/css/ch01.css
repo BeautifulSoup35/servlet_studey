@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* 항상 제일 위에 있어야한다 */
+* {        
+    text-decoration: underline;
+}
+
+#title4 {
+/* 클래스 보다 상위 */
+    font-size: 40px;
+}
+
+.title4 {
+    text-align: center;
+}
+
+.title3 {
+    font-size: 10px;
+    color: pink;
+}
